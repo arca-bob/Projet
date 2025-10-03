@@ -1,0 +1,154 @@
+/* definition de la couleur primaire */
+:root {
+    --color-primary: rgb(42, 41, 41);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    transition: background-color 220ms ease, box-shadow 220ms ease;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: var(--spacing-md);
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.search{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+main {
+    margin-top: 80px;
+    padding: 5px;
+}
+
+.liste_User{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.user{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 15px;
+    width: 30%;
+    padding: 10px;
+}
+
+.user_tache{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.user:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user_info{
+    width: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.liste_tache_user{
+    width: 70%;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.liste_tache_user ul li{
+    list-style-type: none;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_task{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.add_task:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gère le responsive */
+
+@media (max-width: 768px)  {
+    .user{
+        width: 45%;
+    }
+    .liste_tache_user{
+        width: 85%;
+    }
+    .user_info{
+        width: 85%;
+    }
+
+    
+}
+@media (max-width: 600px) {
+    .user{
+        width: 90%;
+    }
+    .user_info{
+        width: 100%;
+    }
+    .liste_tache_user{
+        width: 100%;
+    }
+}
